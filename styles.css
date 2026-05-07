@@ -51,7 +51,11 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-image: radial-gradient(circle at top left, var(--primary-dark), black);
+  background-image: radial-gradient(
+    circle at top left,
+    var(--primary-dark),
+    black
+  );
   color: var(--text-light);
   padding: 15px 0;
   border-radius: 0 0 12px 12px;
@@ -140,7 +144,10 @@ img {
 
 .hero-grid,
 .contact-box {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
 .hero-card,
@@ -202,10 +209,38 @@ img {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .navlinks {
+    gap: 20px;
+  }
+
+  .hero-grid {
+    gap: 30px;
+  }
+
   .typewriter {
     font-size: 28px;
     letter-spacing: 1px;
     max-width: 95%;
+  }
+
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+  }
+
+  .contact-box {
+    gap: 20px;
+  }
+
+  .social-icon a {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.3rem;
+    margin: 2.5rem 1.2rem 2.5rem 0;
   }
 }
 
@@ -483,6 +518,10 @@ img {
     font-size: 26px;
   }
 
+  .hero-grid {
+    display: block;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -501,16 +540,12 @@ img {
     letter-spacing: 1px;
   }
 
-  .type-line-1 {
-    animation:
-      typing-line-1-mobile 2s steps(26, end) forwards,
-      blink 0.8s step-end 3;
-  }
-
-  .type-line-2 {
-    animation:
-      typing-line-2-mobile 3s steps(42, end) 2s forwards,
-      blink 0.8s step-end 2s infinite;
+  .type-line {
+    width: 100%;
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+    animation: none;
   }
 
   .btn {
@@ -518,9 +553,62 @@ img {
     text-align: center;
     margin-right: 0;
   }
+
+  .social-icon a {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    margin: 2rem 1rem 2rem 0;
+  }
+
+  .layer {
+    padding: 0 20px;
+  }
+
+  .layer h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .layer a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .navlinks {
+    gap: 20px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 0;
+  }
+
+  .hero-card,
+  .project-card,
+  .contact-box {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
   .typewriter {
     font-size: 20px;
     width: 100%;
@@ -533,25 +621,90 @@ img {
     border-right: none;
     animation: none;
   }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .work-list {
+    grid-gap: 15px;
+  }
+
+  .layer {
+    padding: 0 15px;
+  }
+
+  .layer h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .layer a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+  }
+
+  .contact-form-box {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .social-icon a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 1.5rem 0.8rem 1.5rem 0;
+  }
 }
 
-@keyframes typing-line-1-mobile {
-  from {
-    width: 0;
+@media (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
   }
 
-  to {
-    width: 18ch;
-  }
-}
-
-@keyframes typing-line-2-mobile {
-  from {
-    width: 0;
+  .navlinks {
+    gap: 40px;
   }
 
-  to {
-    width: 28ch;
+  .hero-grid {
+    gap: 50px;
+  }
+
+  .typewriter {
+    font-size: 36px;
+  }
+
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 25px;
+  }
+
+  .contact-box {
+    gap: 30px;
+  }
+
+  .social-icon a {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.6rem;
+    margin: 3.5rem 1.8rem 3.5rem 0;
   }
 }
 .social-icon a {
@@ -581,7 +734,13 @@ img {
   background-color: var(--primary-dark);
   box-shadow: 0 0 18px var(--primary-dark);
 }
-.container a:hover {
+.navlinks li a:hover {
+  color: var(--primary-dark);
+  transform: scale(1.1) translateY(-5px);
+  /* background-color: var(--primary-dark); */
+  /* box-shadow: 0 0 25px var(--primary-dark); */
+}
+.hero-actions a:hover {
   color: black;
   transform: scale(1.1) translateY(-5px);
   background-color: var(--primary-dark);
