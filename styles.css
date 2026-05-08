@@ -249,6 +249,14 @@ img {
   margin-top: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 51, 102, 0.15);
+  transition: all 500ms linear;
+}
+
+.btn:hover {
+  color: black;
+  background-color: var(--primary-dark);
+  box-shadow: 0 0 25px var(--primary-dark);
+  scale: 0.9;
 }
 
 .submit-btn {
@@ -525,7 +533,14 @@ img {
   .navlinks li {
     margin: 5px 0;
   }
-  .
+
+  .navlinks li a:hover {
+    color: var(--primary-dark);
+    transform: scale(1.1) translateY(-5px);
+    /* background-color: var(--primary-dark); */
+    /* box-shadow: 0 0 25px var(--primary-dark); */
+  }
+
   .navbar-collapse {
     background-image: radial-gradient(circle at top left,
         var(--primary-dark),
@@ -725,7 +740,7 @@ img {
   }
 }
 
-.social-icon a {
+.social-icon a{
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -763,10 +778,12 @@ img {
 }
 
 .hero-actions a:hover,
-.logo:hover {
+.logo:hover,
+.layer a:hover .update:hover {
   color: black;
-  transform: scale(1.1) translateY(-5px);
-  background-color: var(--primary-dark);
+  /* transform: scale(1.1) translateY(-5px); */
+
+  background-color: var(--primary-dark) !important;
   box-shadow: 0 0 25px var(--primary-dark);
 }
 
@@ -778,6 +795,54 @@ img {
   box-shadow: 0 0 18px var(--primary-dark);
 }
 
+.skill-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+}
+.skill-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+      border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.skill-item i{
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--border-gray);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: right;
+  background-color: var(--primary-dark);
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.bar3 {
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: right;
+  background: linear-gradient(
+    to right,
+    var(--primary-dark) 0%,
+    var(--primary-dark) 10%,
+    var(--border-gray) 10%,
+    var(--border-gray) 100%
+  );
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
 @media (hover: none) and (pointer: coarse) {
   .navlinks li a {
     transition: color 0.3s ease;
