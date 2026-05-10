@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name | Portfolio</title>
-  <meta
-    name="description"
-    content="Personal portfolio website of Your Name, showcasing projects, skills, and contact information."
-  >
+  <meta name="description"
+    content="Personal portfolio website of Your Name, showcasing projects, skills, and contact information.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Work+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <body>
   <header class="site-header">
     <div class="container nav navbar navbar-expand-md">
       <a class="logo" href="#home">KD</a>
-      <button
-        class="navbar-toggler custom-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#portfolioNav"
-        aria-controls="portfolioNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#portfolioNav" aria-controls="portfolioNav" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <nav class="menu collapse navbar-collapse" id="portfolioNav">
         <ul class="navlinks navbar-nav ms-auto">
           <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -47,32 +41,64 @@
   </header>
 
   <main id="home">
-    <section class="hero">
+    <section class="hero reveal-section" data-reveal="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Personal Portfolio</p>
+        <div class="hero-copy reveal-item">
+          <p class="eyebrow">BSc IT Student • Web Developer</p>
           <h1>
-            <span class="typewriter">Hi, I'm Kunjan Dhandhukia. I build clean and creative web experiences.</span>
+            <span class="typewriter">Hi, I'm Kunjan Dhandhukia. I build modern websites with clean code and sharp visual
+              style.</span>
           </h1>
           <p class="hero-text">
-            This is a simple portfolio foundation where you can introduce yourself,
-            highlight your best work, and make it easy for people to connect with you.
+            I am currently pursuing a BSc IT degree and enjoy building responsive, polished web experiences with HTML,
+            CSS, JavaScript, Java, Python, and SQL.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions reveal-item">
             <a class="btn btn-primary" href="#projects">View Projects</a>
             <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="hero-metrics reveal-stagger">
+            <div class="metric-card reveal-item">
+              <strong>6+</strong>
+              <span>Core skills</span>
+            </div>
+            <div class="metric-card reveal-item">
+              <strong>2</strong>
+              <span>Completed levels</span>
+            </div>
+            <div class="metric-card reveal-item">
+              <strong>2026</strong>
+              <span>Growing every day</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual reveal-item">
+          <div class="hero-panel tilt-card">
+            <img class="hero-panel-logo" src="./polarbear.jpg" alt="Kunjan Dhandhukia logo">
+            <p class="hero-panel-label">Current Focus</p>
+            <h2>Designing responsive portfolio experiences</h2>
+            <p>
+              I like combining clear layout, smooth interactions, and practical development skills to create websites
+              that feel modern and easy to use.
+            </p>
+            <div class="hero-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Java</span>
+              <span>Python</span>
+              <span>SQL</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section intro-section">
+    <section class="section intro-section reveal-section">
       <div class="container">
-        <div class="intro-card">
-          <img
-            class="hero-image"
+        <div class="intro-card tilt-card reveal-item">
+          <img class="hero-image"
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
-            alt="Workspace setup for a personal portfolio website"
-          >
+            alt="Workspace setup for a personal portfolio website">
           <div>
             <p class="card-label">Quick Intro</p>
             <h2>Developer</h2>
@@ -90,75 +116,108 @@
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section reveal-section" id="about">
       <div class="container">
         <p class="section-tag">About</p>
-        <h2 class="section-title">A strong starting point for your personal brand</h2>
+        <h2 class="section-title">Building a strong foundation in development and design</h2>
         <p class="section-text">
-          Use this section to share a short introduction about yourself, your goals,
-          your studies, or the kind of work you enjoy. Keep it simple and personal.
+          I am a motivated student developer who enjoys learning by building. My focus is on creating websites that are
+          responsive, visually clean, and easy for people to navigate. I am especially interested in improving my
+          frontend skills while growing into a more complete software developer.
         </p>
       </div>
     </section>
-    <section class="section" id="skills">
+    <section class="section reveal-section" id="education">
+      <div class="container">
+        <p class="section-tag">Education</p>
+        <h2 class="section-title">My academic background</h2>
+        <div class="education-grid reveal-stagger">
+          <article class="education-card reveal-item tilt-card">
+            <span class="education-year">Completed</span>
+            <h3>10th Standard</h3>
+            <p>Built the base of my academic journey with a strong focus on discipline, consistency, and learning
+              fundamentals.</p>
+          </article>
+          <article class="education-card reveal-item tilt-card">
+            <span class="education-year">Completed</span>
+            <h3>12th Standard</h3>
+            <p>Completed higher secondary education and strengthened my interest in technology, problem-solving, and
+              future IT studies.</p>
+          </article>
+          <article class="education-card education-card-active reveal-item tilt-card">
+            <span class="education-year">Current</span>
+            <h3>BSc IT Degree</h3>
+            <p>I am currently studying for a Bachelor of Science in Information Technology and continuing to build
+              practical web development skills through projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section reveal-section" id="skills">
       <div class="container">
         <p class="section-tag">Skills</p>
         <h2 class="section-title">What I bring to the table</h2>
-        <div class="skill-list">
-          <div class="skill-item">
+        <div class="skill-list reveal-stagger">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-brands fa-html5"></i>
             <h3>HTML</h3>
-            <p>HTML (HyperText Markup Language) is the standard markup language used to structure content on the web.</p>
-            <div class="bar">100%</div>
+            <p>HTML (HyperText Markup Language) is the standard markup language used to structure content on the web.
+            </p>
+            <div class="bar" style="--fill-width: 100%;">100%</div>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-brands fa-css3"></i>
             <h3>CSS</h3>
-            <p>CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation of a document written in HTML.</p>
-            <div class="bar">100%</div>
+            <p>CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation of a document
+              written in HTML.</p>
+            <div class="bar" style="--fill-width: 100%;">100%</div>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-brands fa-js"></i>
             <h3>JavaScript</h3>
             <p>JavaScript is a programming language that enables interactive web pages.</p>
-            <div class="bar3">10%</div>
+            <div class="bar3" style="--fill-width: 10%;">10%</div>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-brands fa-java"></i>
             <h3>Java</h3>
-            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-            <div class="bar">100%</div>
+            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few
+              implementation dependencies as possible.</p>
+            <div class="bar" style="--fill-width: 100%;">100%</div>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-solid fa-database"></i>
             <h3>SQL</h3>
-            <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system.</p>
-            <div class="bar">100%</div>
+            <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for
+              managing data held in a relational database management system.</p>
+            <div class="bar" style="--fill-width: 100%;">100%</div>
           </div>
-          <div class="skill-item">
+          <div class="skill-item reveal-item tilt-card">
             <i class="fa-brands fa-python"></i>
             <h3>Python</h3>
             <p>Python is a high-level, general-purpose programming language that emphasizes code readability.</p>
-            <div class="bar">100%</div>
+            <div class="bar" style="--fill-width: 100%;">100%</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="projects">
+    <section class="section section-alt reveal-section" id="projects">
       <div class="container">
         <p class="section-tag">Projects</p>
         <h2 class="section-title">Featured Work</h2>
-        <div class="work-list">
-          <div class="work">
+        <div class="work-list reveal-stagger">
+          <div class="work reveal-item tilt-card">
             <img src="./Screenshot 2026-05-06 180132.png" alt="">
             <div class="layer">
               <h3>Ice Cream Project</h3>
-              <p>An ice cream project typically involves setting up a small to medium-scale manufacturing unit to produce and market different varieties of ice cream.</p>
-              <a href="https://starlit-arithmetic-662694.netlify.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <p>An ice cream project typically involves setting up a small to medium-scale manufacturing unit to
+                produce and market different varieties of ice cream.</p>
+              <a href="https://starlit-arithmetic-662694.netlify.app/" target="_blank"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
-          <div class="work">
+          <div class="work reveal-item tilt-card">
             <img src="./polarbear.jpg" alt="">
             <div class="layer">
               <h3>Social media app</h3>
@@ -166,25 +225,27 @@
               <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
-          <div class="work">
+          <div class="work reveal-item tilt-card">
             <img src="./polarbear.jpg" alt="">
             <div class="layer">
               <h3>Social media app</h3>
               <p>The app connects you to the talented people around the world. Download now</p>
-              <a href="https://github.com/KUNJAN1029/Banking_Management_System" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>            
+              <a href="https://github.com/KUNJAN1029/Banking_Management_System" target="_blank"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section reveal-section" id="contact">
       <div class="container contact-box">
-        <div>
+        <div class="reveal-item">
           <p class="section-tag">Contact</p>
           <h2 class="section-title">Let's work together</h2>
           <p class="section-text">
-            kunjandhan1029@gmail.com, LinkedIn, GitHub, X-Twitter, Instagram or any other platform where people can reach you.
+            kunjandhan1029@gmail.com, LinkedIn, GitHub, X-Twitter, Instagram or any other platform where people can
+            reach you.
           </p>
           <div class="social-icon">
             <a href="https://in.linkedin.com"><i class="fa-brands fa-square-linkedin"></i></a>
@@ -193,7 +254,7 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
-        <div class="contact-form-box">
+        <div class="contact-form-box reveal-item tilt-card">
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
               <label for="name">Name</label>
@@ -224,6 +285,11 @@
   <script>
     const mobileNav = document.getElementById("portfolioNav");
     const navItems = document.querySelectorAll(".navlinks a");
+    const skillBars = document.querySelectorAll(".bar, .bar3");
+    const skillsSection = document.getElementById("skills");
+    const revealSections = document.querySelectorAll(".reveal-section");
+    const tiltCards = document.querySelectorAll(".tilt-card");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     navItems.forEach(function (item) {
       item.addEventListener("click", function () {
@@ -233,6 +299,76 @@
         }
       });
     });
+
+    const barObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            skillBars.forEach(function (bar) {
+              bar.classList.add("is-visible");
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.35
+      }
+    );
+
+    if (skillsSection) {
+      barObserver.observe(skillsSection);
+    }
+
+    if (!reduceMotion.matches) {
+      const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.16,
+          rootMargin: "0px 0px -8% 0px"
+        }
+      );
+
+      revealSections.forEach(function (section) {
+        revealObserver.observe(section);
+      });
+
+      tiltCards.forEach(function (card) {
+        card.addEventListener("pointermove", function (event) {
+          if (window.innerWidth <= 991) {
+            card.style.removeProperty("--tilt-x");
+            card.style.removeProperty("--tilt-y");
+            return;
+          }
+
+          const rect = card.getBoundingClientRect();
+          const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+          const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+
+          card.style.setProperty("--tilt-x", (offsetX * 8).toFixed(2) + "deg");
+          card.style.setProperty("--tilt-y", (offsetY * -8).toFixed(2) + "deg");
+        });
+
+        card.addEventListener("pointerleave", function () {
+          card.style.removeProperty("--tilt-x");
+          card.style.removeProperty("--tilt-y");
+        });
+      });
+    } else {
+      revealSections.forEach(function (section) {
+        section.classList.add("is-visible");
+      });
+    }
   </script>
 </body>
+
 </html>
