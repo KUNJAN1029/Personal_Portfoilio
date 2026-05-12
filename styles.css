@@ -56,19 +56,37 @@ img {
 }
 
 .site-header {
+  width: 90%;
   position: sticky;
   top: 0;
+  margin: 1rem auto 0;
+  padding: 1.1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 999px;
+  box-shadow: var(--primary-dark);
+  z-index: 1000;
+  border-radius: 999px;
+}
+
+.nav {
+  margin: 1rem auto 0;
+  padding: 1.1rem 1rem;
+  border-radius: 999px;
+  box-shadow: var(--primary-dark);
   z-index: 1000;
   background-image: radial-gradient(circle at top left,
       var(--primary-dark),
       black);
   color: var(--text-light);
-  padding: 15px 0;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 3px 10px rgba(0, 51, 102, 0.25);
-}
-
-.nav {
+  border-radius: 999px;
+  position: fixed;
+  inset: 0 0 auto 0;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(18px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -404,7 +422,7 @@ img {
   border-radius: 24px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(108, 140, 173, 0.18);
+  /* border: 1px solid rgba(108, 140, 173, 0.18); */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
 }
 
@@ -424,7 +442,7 @@ img {
   width: 100%;
   height: 0;
   background: linear-gradient(180deg, rgba(2, 9, 18, 0.15), rgba(0, 255, 255, 0.92));
-  border-radius: 24px;
+  /* border-radius: 24px; */
   position: absolute;
   left: 0;
   bottom: 0;
@@ -793,7 +811,7 @@ img {
   }
 }
 
-.social-icon a{
+.social-icon a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -839,7 +857,7 @@ img {
 
 .hero-copy,
 .hero-visual,
-.section > .container,
+.section>.container,
 .intro-card,
 .skill-item,
 .education-card,
@@ -975,8 +993,8 @@ img {
   background: rgba(5, 10, 18, 0.45);
 }
 
-.section + .section,
-.hero + .section {
+.section+.section,
+.hero+.section {
   margin-top: 18px;
 }
 
@@ -1011,14 +1029,14 @@ img {
   box-shadow: 0 24px 60px rgba(0, 255, 255, 0.08);
 }
 
-.skill-list{
+.skill-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 20px;
   margin-top: 1.5rem;
 }
 
-.skill-item{
+.skill-item {
   min-height: 350px;
   padding: 5.5rem 1.4rem 1.5rem;
   border: 1px solid rgba(108, 140, 173, 0.18);
@@ -1095,24 +1113,26 @@ img {
   box-shadow: 0 0 18px var(--primary-dark);
 }
 
-.skill-list{
+.skill-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-.skill-item{
+
+.skill-item {
   min-height: 350px;
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-radius: 26px;
   position: relative;
   overflow: hidden;
   text-align: center;
 }
-.skill-item i{
+
+.skill-item i {
   position: absolute;
   top: 1rem;
   left: 50%;
@@ -1121,13 +1141,14 @@ img {
   justify-content: center;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  animation: floatBadge 1.8s ease-in-out infinite;
+  animation: floatBadge 4.8s ease-in-out infinite;
   font-size: 2.5rem;
   color: var(--primary-dark);
   transform: translateX(-50%);
 }
 
 @keyframes floatBadge {
+
   0%,
   100% {
     transform: translateX(-50%) translateY(0);
@@ -1137,11 +1158,13 @@ img {
     transform: translateX(-50%) translateY(-10px);
   }
 }
+
 .bar,
 .bar3 {
   position: relative;
   width: 98%;
   height: 20px;
+  padding: auto;
   border-radius: 5px;
   overflow: hidden;
   padding-right: 0.5rem;
@@ -1162,7 +1185,7 @@ img {
   background-color: var(--primary-dark);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 1.2s ease;
+  transition: transform 4.8s ease;
   z-index: -1;
 }
 
@@ -1188,6 +1211,7 @@ body {
 .reveal-section.is-visible .reveal-item {
   opacity: 1;
   transform: translateY(0) scale(1);
+  border-radius: 10px;
 }
 
 .reveal-stagger .reveal-item:nth-child(1) {
@@ -1225,14 +1249,11 @@ body {
 @media (hover: hover) and (pointer: fine) {
   .tilt-card:hover {
     transform:
-      perspective(1200px)
-      rotateX(var(--tilt-y, 0deg))
-      rotateY(var(--tilt-x, 0deg))
-      translateY(-6px);
+      perspective(1200px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateY(-6px);
   }
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   position: absolute;
   inset: auto -8% -18% auto;
@@ -1243,7 +1264,7 @@ body {
   filter: blur(12px);
   animation: haloPulse 7s ease-in-out infinite;
   pointer-events: none;
-}
+} */
 
 .hero-panel,
 .intro-card,
@@ -1270,6 +1291,7 @@ body {
 }
 
 @keyframes haloPulse {
+
   0%,
   100% {
     transform: scale(0.92);
@@ -1281,6 +1303,7 @@ body {
     opacity: 1;
   }
 }
+
 @media (hover: none) and (pointer: coarse) {
   .navlinks li a {
     transition: color 0.3s ease;
@@ -1308,6 +1331,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1675,6 +1699,7 @@ body {
 }
 
 @media (max-width: 991px) {
+
   #skills .skill-list,
   #projects .work-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1682,6 +1707,7 @@ body {
 }
 
 @media (max-width: 767px) {
+
   #skills .skill-list,
   #projects .work-list {
     grid-template-columns: 1fr;
@@ -1710,6 +1736,7 @@ body {
 }
 
 @media (max-width: 575px) {
+
   #skills .skill-list,
   #projects .work-list {
     gap: 16px;
